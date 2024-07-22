@@ -24,11 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     feedbackDiv.style.display = "block";
-    if (isValid) {
+    if (isValid === true) {
       feedbackDiv.textContent = "Registration successful!";
       feedbackDiv.style.color = "#28a745";
     } else {
-      feedbackDiv.textContent = messages.join("\n");
+      feedbackDiv.textContent = messages.join("<br>");
+      feedbackDiv.style.color = "#dc3545";
     }
   });
 });
